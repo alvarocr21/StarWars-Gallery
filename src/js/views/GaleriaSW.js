@@ -27,6 +27,7 @@ export const GaleriaSW = () => {
 							<a href="#" className="btn btn-primary">
 								Learn more!
 							</a>
+							<i className="far fa-heart" />
 						</div>
 					</div>
 				</div>
@@ -48,6 +49,7 @@ export const GaleriaSW = () => {
 							<a href="#" className="btn btn-primary">
 								Learn more!
 							</a>
+							<i className="far fa-heart" />
 						</div>
 					</div>
 				</div>
