@@ -6,7 +6,7 @@
 !.github
 php_errorlog
 .log
-
+!/workspace/react-hello-webapp/src/js
 # track this file .gitignore (i.e. do NOT ignore it)
 !composer.json
 !webpack.config.js
