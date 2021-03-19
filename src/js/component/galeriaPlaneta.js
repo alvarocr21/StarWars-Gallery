@@ -17,10 +17,14 @@ export const GaleriaPlanet = () => {
 							Some quick example text to build on the card title and make up the bulk of the cards
 							content.
 						</p>
-						<a href="#" className="btn btn-primary">
-							Learn more!
-						</a>
-						<i className="far fa-heart" />
+						<div className="d-flex justify-content-between">
+							<a href="#" className="btn btn-primary">
+								Learn more!
+							</a>
+							<button className="btn btn-outline-warning border border-warning p-2">
+								<i className="far fa-heart" />
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
