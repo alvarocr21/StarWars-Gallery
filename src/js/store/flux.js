@@ -4,7 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			personajes: [],
 			planetas: [],
 			perCompleto: {},
-			uri: "https://swapi.dev/api"
+			uri: "https://swapi.dev/api/"
 		},
 
 		actions: {
@@ -13,20 +13,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getActions().changeColor(0, "green");
 			},
 
-			loadPersons: async () => {
+			loadPersons: () => {
 				const store = getStore();
 
-				const response = await fetch(store.uri + "/people")
+				fetch(store.uri + "people/")
 					.then(res => res.json())
 					.then(data => setStore({ personajes: data.results }));
 
-				console.log(response);
+				//console.log(response);
 			},
 
 			loadPlanets: () => {
 				const store = getStore();
 
-				fetch(store.uri + "/planets")
+				fetch(store.uri + "planets/")
 					.then(res => res.json())
 					.then(data => setStore({ planetas: data.results }));
 			},
