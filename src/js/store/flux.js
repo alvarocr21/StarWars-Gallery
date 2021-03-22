@@ -3,7 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			personajes: [],
 			planetas: [],
-			perCompleto: {},
+			favoritos: [],
 			uri: "https://swapi.dev/api/"
 		},
 
@@ -11,6 +11,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
+			},
+
+			addFavorite: favorito => {
+				console.log(favorito);
+				//setStore({ favoritos: favorito });
 			},
 
 			loadPersons: () => {
