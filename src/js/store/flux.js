@@ -13,10 +13,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getActions().changeColor(0, "green");
 			},
 
-			addFavorite: favorito => {
-				console.log(favorito);
-				//setStore({ favoritos: favorito });
-			},
+			//addFavorite: favorito => {
+			//console.log(favorito);
+			//setStore({ favoritos: favorito });
+			//},
 
 			loadPersons: () => {
 				const store = getStore();
