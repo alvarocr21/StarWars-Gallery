@@ -26,29 +26,35 @@ export const GaleriaPersonaje = () => {
 									/>
 									<div className="card-body">
 										<h5 className="card-title">{personaje.name}</h5>
-										<p className="card-text">
-											<ul>
-												<li>
-													Gender:
-													{personaje.gender}
-												</li>
-												<li>
-													Hair Color:
-													{personaje.hair_color}
-												</li>
-												<li>
-													Eye Color:
-													{personaje.eye_color}
-												</li>
-											</ul>
+										<p className="card-text ml-3">
+											<li>
+												Gender:
+												{personaje.gender}
+											</li>
+											<li>
+												Hair Color:
+												{personaje.hair_color}
+											</li>
+											<li>
+												Eye Color:
+												{personaje.eye_color}
+											</li>
 										</p>
 										<div className="d-flex justify-content-between">
 											<a href="#" className="btn btn-primary">
 												Learn more!
 											</a>
-											<button className="btn btn-outline-warning border border-warning p-2">
-												<i className="far fa-heart" />
-											</button>
+											<a
+												className="btn btn-outline-warning border border-warning p-2"
+												onClick={() => actions.addFavorite(personaje.name)}>
+												{store.favoritos.map((favorito, index) => {
+													if (favorito.name == personaje.name) {
+														return <i className="fas fa-heart" key={index} />;
+													} else {
+														return <i className="far fa-heart" key={index} />;
+													}
+												})}
+											</a>
 										</div>
 									</div>
 								</div>

@@ -27,17 +27,15 @@ export const GaleriaPlanet = () => {
 									/>
 									<div className="card-body">
 										<h5 className="card-title">{planeta.name}</h5>
-										<p className="card-text">
-											<ul>
-												<li>
-													Population:
-													{planeta.population}
-												</li>
-												<li>
-													Terrain:
-													{planeta.terrain}
-												</li>
-											</ul>
+										<p className="card-text ml-3">
+											<li>
+												Population:
+												{planeta.population}
+											</li>
+											<li>
+												Terrain:
+												{planeta.terrain}
+											</li>
 										</p>
 										<div className="d-flex justify-content-between">
 											<a href="#" className="btn btn-primary">

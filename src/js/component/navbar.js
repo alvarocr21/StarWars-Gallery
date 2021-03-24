@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
@@ -8,6 +9,7 @@ import $ from "jquery";
 import Popper from "popper.js";
 
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
@@ -38,15 +40,13 @@ export const Navbar = () => {
 						Favorites <span className="badge badge-light">0</span>
 					</button>
 					<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<a className="dropdown-item" href="#">
-							Action
-						</a>
-						<a className="dropdown-item" href="#">
-							Another action
-						</a>
-						<a className="dropdown-item" href="#">
-							Something else here
-						</a>
+						{store.favoritos.map((favorito, index) => {
+							return (
+								<a className="dropdown-item" href="#" key={index}>
+									{favorito.name}
+								</a>
+							);
+						})}
 					</div>
 				</div>
 			</div>
